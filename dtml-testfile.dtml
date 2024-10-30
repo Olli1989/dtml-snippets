@@ -1,0 +1,16 @@
+<dtml-let 
+  test=""
+  abc="">
+</dtml-let>
+<a></a>
+<div></div>
+<dtml-let test="dfsd"></dtml-let>
+
+y
+<div></div>
+dtml-let
+
+<dtml-let > <a href=""></a></dtml-let>
+<a href="<dtml-if>sdfdsf</dtml-if>">
+
+<dtml-let ></dtml-let>

@@ -1,0 +1,7 @@
+{
+  "Tag Autocomplete": {
+    "prefix": "dtml-let",
+    "body": ["<dtml-let $1>$0</dtml-let>"],
+    "description": "Inserts a custom HTML-like dtml let structure."
+  }
+}

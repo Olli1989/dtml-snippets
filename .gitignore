@@ -1,0 +1,16 @@
+# Ignore all JavaScript files except the bundled one
+*.js
+!out/extension.bundle.js
+
+# Ignore the source directory
+src/
+
+# Ignore node_modules
+node_modules/
+
+# Ignore configuration files
+.vscode/
+*.log
+*.ts
+*.map
+.DS_Store

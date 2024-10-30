@@ -1,0 +1,67 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "scopeName": "source.dtml",
+  "name": "dtml",
+  "patterns": [
+    {
+      "include": "#tags"
+    },
+    {
+      "include": "text.html.basic"
+    }
+  ],
+  "repository": {
+    "tags": {
+      "patterns": [
+        {
+          "name": "entity.name.tag.dtml",
+          "match": "\\b(?i)(DTML-LET|DTML-IF)\\b"
+        },
+        {
+          "name": "meta.attribute.dtml",
+          "match": "([a-zA-Z_][a-zA-Z0-9_-]*)\\s*=",
+          "captures": {
+            "1": {
+              "name": "entity.other.attribute-name.dtml"
+            }
+          },
+          "push": {
+            "name": "meta.attribute.value.dtml",
+            "patterns": [
+              {
+                "name": "string.quoted.double.dtml",
+                "begin": "\"",
+                "end": "\"",
+                "beginCaptures": {
+                  "0": {
+                    "name": "punctuation.definition.string.begin.dtml"
+                  }
+                },
+                "endCaptures": {
+                  "0": {
+                    "name": "punctuation.definition.string.end.dtml"
+                  }
+                }
+              },
+              {
+                "name": "string.quoted.single.dtml",
+                "begin": "'",
+                "end": "'",
+                "beginCaptures": {
+                  "0": {
+                    "name": "punctuation.definition.string.begin.dtml"
+                  }
+                },
+                "endCaptures": {
+                  "0": {
+                    "name": "punctuation.definition.string.end.dtml"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

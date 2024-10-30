@@ -1,0 +1,69 @@
+{
+  "name": "atikon-dtml-snippets",
+  "displayName": "atikon-dtml-snippets",
+  "description": "dtml snippets",
+  "version": "0.0.1",
+  "publisher": "Testpublisher",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "icon": "images/test-bug.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Olli1989/dtml-snippets.git"
+  },
+  "scripts": {
+    "build": "webpack"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "dtml",
+        "aliases": [
+          "DTML",
+          "dtml"
+        ],
+        "extensions": [
+          ".dtml"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "dtml",
+        "scopeName": "source.dtml",
+        "path": "./syntaxes/dtml.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "dtml",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ],
+    "themes": [
+      {
+        "label": "My Custom Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/myTheme.json"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onLanguage:dtml"
+  ],
+  "main": "./src/extension.js",
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@types/vscode": "^1.94.0",
+    "babel-loader": "^9.2.1",
+    "vscode": "^1.1.37",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
